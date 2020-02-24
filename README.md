@@ -74,3 +74,16 @@ For running Alpine you have two options:
 You can do both options over SSH as well.
 
 The default password of the user "alpine" is "alpine".
+
+### Connecting to kterm
+*********************
+
+- USB networking can be toggled by entering ;un into the search box of the menu (or from KUAL).
+- With the default settings, the IP of the kindle is 192.168.15.244
+- Connecting to the Kindle
+    - from Linux: ifconfig usb0 192.168.15.201 && ssh root@192.168.15.244
+    - from Windows:
+        - To connect from Windows, you'll need a remote terminal application (two of the popular choices are PuTTy & WinSCP).
+        - Plug in your Kindle and wait for Windows to recognise the device.
+        - Then go to Control Panel > Network and Internet > Network and Sharing Center > Change adapter settings. Find the Local Area Connection # with small text "Unidentified Network, RNDIS/Ethernet Gadget" below, Right click on it and click properties, choose the Internet Protocol Version 4 (TCP/IPv4) and click Properties, click "Use the following IP address" and enter IP address 192.168.15.201, and 255.255.255.0 for the subnet mask, click OK twice. (take a look at the discussion page if you have problems finding the RNDIS connection)
+         - Open your remote terminal application, and connect as root to the address 192.168.15.244, leaving the password empty (or use mario if all else fails). 
