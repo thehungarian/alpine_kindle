@@ -20,7 +20,7 @@ IMAGE="./alpine.ext3"
 IMAGESIZE=1024 #Megabytes
 ALPINESETUP="source /etc/profile
 echo kindle > /etc/hostname
-echo \"nameserver 8.8.8.8\" > /etc/resolv.conf
+echo \"nameserver 192.168.10.1\" > /etc/resolv.conf
 mkdir /run/dbus
 apk update
 apk upgrade
